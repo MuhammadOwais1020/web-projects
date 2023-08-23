@@ -1,0 +1,38 @@
+@font-face {
+    font-family: BricolageGrotesque;
+    src: url(fonts/BricolageGrotesque.ttf);
+}
+
+:root {
+    --primary: #CEE5EE;
+    --secondry: #ffffff;
+    --heading-text: #05287C;
+    --icon: #5D2F99;
+    --highlight: #FFCC01;
+    --text: #000000;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    /* background: red; */
+    background: radial-gradient(circle, var(--secondry) 0%, var(--primary) 100%);
+}
+
+.hero h1 {
+    text-align: center;
+    color: var(--text);
+    font-size: 5rem;
+    font-family: BricolageGrotesque;
+    margin: 0px;
+    font-weight: 200;
+}
+
+.hero h1 strong {
+    color: var(--heading-text);
+}
