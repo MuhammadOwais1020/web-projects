@@ -3,6 +3,11 @@
     src: url(fonts/BricolageGrotesque.ttf);
 }
 
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat.ttf);
+}
+
 :root {
     --primary: #CEE5EE;
     --secondry: #ffffff;
@@ -24,15 +29,214 @@ body {
     background: radial-gradient(circle, var(--secondry) 0%, var(--primary) 100%);
 }
 
+.inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .hero h1 {
     text-align: center;
     color: var(--text);
     font-size: 5rem;
     font-family: BricolageGrotesque;
     margin: 0px;
-    font-weight: 200;
+    padding-top: 1em;
+    font-weight: 300;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.09);
 }
 
 .hero h1 strong {
     color: var(--heading-text);
+    border-bottom: solid 3px var(--highlight);
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.hero p {
+    text-align: center;
+    font-size: 2rem;
+    font-family: Montserrat;
+    font-weight: 400;
+
+}
+
+.hero .header-elements {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.download-btn {
+    display: flex;
+    background-color: var(--secondry);
+    border-radius: 2.5em;
+    height: 3.8em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon {
+    width: 4.2em;
+    height: 4.2em;
+    border-radius: 50%;
+    background-color: var(--heading-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.download-details {
+    width: 18em;
+    height: 4.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.download-details p {
+    margin: 0px;
+    font-size: 1.2rem;
+}
+
+.price-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.8em;
+}
+
+.quote {
+    max-width: 400px;
+    text-align: center;
+    color: var(--heading-text);
+    font-family: Montserrat;
+    font-size: 1.5rem;
+}
+
+.feature {
+    width: 100%;
+    height: 40em;
+    font-family: Montserrat;
+    color: var(--heading-text);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.prt {
+    background-position: right top;
+}
+
+.plt {
+    background-position: left top;
+}
+
+.spirit {
+    background-image: url(images/label/label1.png);
+}
+
+.startup {
+    background-image: url(images/label/startup.png);
+}
+
+.empower {
+    background-image: url(images/label/empower.png);
+}
+
+.ventures {
+
+    background-image: url(images/label/ventures.png);
+}
+
+.curve {
+    background-image: url(images/label/curve.png);
+}
+
+.revolution {
+    background-image: url(images/label/startup.png);
+}
+
+.unlock {
+    background-image: url(images/label/unlock.png);
+}
+
+.first-step {
+    background-image: url(images/label/first-step.png);
+}
+
+.feature .text {
+    padding: 4em;
+    width: 65%;
+
+}
+
+.feature h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.feature p {
+    font-size: 1.875rem;
+}
+
+.odd {
+    background-color: var(--secondry) !important;
+}
+
+.even {
+    padding-left: 25em;
+    background-color: var(--primary) !important;
+}
+
+footer {
+    color: var(--heading-text);
+    font-family: Montserrat;
+    width: 100%;
+}
+
+footer .info {
+    width: 40%;
+    padding: 1em 4em;
+}
+
+footer .contact-us {
+    width: 40%;
+}
+
+footer h1 {
+    font-size: 3rem;
+}
+
+footer p {
+    font-size: 1.875rem;
+}
+
+footer hr {
+    width: 90%;
+}
+
+.all-rights p {
+    text-align: center;
+    font-weight: 200;
+}
+
+footer .contact-us h1 {
+    font-size: 40px;
+}
+
+footer .upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social-icons img {
+    width
 }
