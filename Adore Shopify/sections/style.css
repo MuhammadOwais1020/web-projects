@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 .menu-section {
@@ -91,7 +92,196 @@ body {
     background-color: #F35B4F;
     color: white;
     font-weight: bold;
+    cursor: pointer;
 }
+
+.image-text-section {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.image-text-section .picture {
+    width: 40%;
+    height: 100%;
+    background-image: url('img/image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-text-section .picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.image-text-section .picture-details {
+    width: 60%;
+    background-color: #F35B4F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px 0px;
+}
+
+.image-text-section .picture-details button {
+    background-color: #B05D5D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.image-text-section .picture-details .its-heading {
+    font-size: 1.75em;
+}
+
+.image-text-section .picture-details .its-offer {
+
+    font-size: 4.688em;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.image-text-section .picture-details .its-price {
+    font-size: 2.25em;
+}
+
+.discount-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.discount-section #first {
+    background-image: url('img/brazalete-pandora.png') !important;
+}
+
+.discount-section #second {
+    background-image: url('img/badge.png') !important;
+}
+
+.discount-section .discount-card {
+    width: 450px;
+    height: 200px;
+    background-color: #F7E3DC;
+    /* background-image: url('img/brazalete-pandora.png'); */
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain;
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.discount-section .discount-card button {
+    width: 150px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #F35B4F;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.discount-card .heading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.discount-card .description {
+    margin: 0px;
+}
+
+.delivery-option-section {
+    width: 100%;
+    background-color: #EFEFF1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.delivery-option-section .option {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+.delivery-option-section .option img {
+    width: 50px;
+}
+
+.delivery-option-section .option #transport {
+    width: 65px;
+}
+
+.delivery-option-section .option p {
+    text-align: center;
+}
+
+.signup-section {
+    width: 100%;
+    background-color: #FE6A44;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.signup-section a {
+    color: rgb(255, 255, 255);
+}
+
+.signup-section .first-child {
+    max-width: 500px;
+    padding: 0px 10px;
+    margin: 0 auto;
+}
+
+.signup-section .input-group {
+    display: flex;
+    justify-content: center;
+}
+
+::placeholder {
+    color: white;
+}
+
+.signup-section .input-group input {
+    background: none;
+    border: solid 1px white;
+    padding: 10px;
+    color: white;
+    font-size: 18px;
+    margin: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.signup-section .input-group button {
+    padding: 10px;
+    font-size: 18px;
+    border: solid 1px white;
+    background-color: white;
+    color: #B05D5D;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
 
 @media only screen and (max-width: 1024px) {
     .menu-section {
@@ -121,5 +311,61 @@ body {
     .category-section .call-to-action button {
         width: 150px;
         padding: 10px 0px;
+    }
+
+
+    .image-text-section {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .image-text-section .picture {
+        width: 100%;
+        height: 400px;
+    }
+
+    .image-text-section .picture-details {
+        width: 100%;
+    }
+
+    .image-text-section .picture-details .its-heading {
+        font-size: 0.9rem;
+    }
+
+    .image-text-section .picture-details .its-offer {
+
+        font-size: 4.2rem;
+        margin: 0px;
+        font-weight: bold;
+    }
+
+    .image-text-section .picture-details .its-price {
+        font-size: 1.5rem;
+    }
+
+    .discount-section {
+        flex-direction: column;
+    }
+
+    .discount-section .discount-card {
+        width: 85%;
+    }
+
+    .delivery-option-section {
+        flex-direction: column;
+    }
+
+    .delivery-option-section .option {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .delivery-option-section .option img {
+        width: 35px;
+        margin-right: 15px;
+    }
+
+    .delivery-option-section .option #transport {
+        width: 50px;
     }
 }
