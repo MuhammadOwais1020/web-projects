@@ -1,0 +1,94 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: roboto;
+}
+
+.youtube-button-section {
+    width: 100%;
+    height: 200px;
+    background-color: #F5ABBE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtube-button-section .youtube {
+    background-color: rgba(255, 255, 255, 0.214);
+    width: 800px;
+    margin: 0 auto;
+    border-radius: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.youtube a {
+    background-color: rgb(228, 63, 57);
+    border: none;
+    color: white;
+    font-size: 16px;
+    /* padding: 10px 20px; */
+    border-radius: 100px;
+    width: 180px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.youtube h1 {
+    margin-bottom: 0px;
+}
+
+.youtube p {
+    margin-top: 0px;
+    color: #c4302b;
+}
+
+.youtube .logo {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo img {
+    width: 120%;
+}
+
+.text-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 648px) {
+    .youtube-button-section {
+        height: auto;
+        padding: 50px 0px;
+    }
+
+    .youtube-button-section .youtube {
+        max-width: 85%;
+        border-radius: 10px;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
+    .youtube h1,
+    .youtube p {
+        text-align: center;
+    }
+
+    .text-logo {
+        flex-direction: column;
+    }
+}
