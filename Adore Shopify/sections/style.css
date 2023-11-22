@@ -1,0 +1,125 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-section {
+    background-color: #F8E1DC;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    color: #BA757A;
+}
+
+.menu-section-childs {
+    display: flex;
+    align-items: center;
+    margin: 0px 5px;
+}
+
+.menu-section-childs img {
+    width: 50px;
+}
+
+.menu-section-childs p {
+    font-size: 14px;
+}
+
+.category-section {
+    color: #BA757A;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-section h2 {
+    font-size: 18px;
+}
+
+.category-section .categories {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.category-section .categories div {
+    width: 180px;
+    background-color: #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #d9d9d9;
+    border-radius: 5px;
+    margin: 0px 15px;
+}
+
+.category-section .categories div img {
+    width: 75px;
+}
+
+.category-section .categories div p {
+    font-weight: bold;
+}
+
+.category-section .call-to-action {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.category-section .call-to-action div {
+    display: flex;
+    justify-content: center;
+}
+
+.category-section .call-to-action h2 {
+    margin-right: 5px;
+}
+
+.category-section .call-to-action button {
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+    background-color: #F35B4F;
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1024px) {
+    .menu-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-section-childs {
+        margin: 5px 0px;
+    }
+
+    .category-section .categories div {
+        margin: 0px 10px;
+    }
+
+    .category-section .call-to-action,
+    .category-section .call-to-action div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .category-section .call-to-action h2 {
+        margin: 0px;
+    }
+
+    .category-section .call-to-action button {
+        width: 150px;
+        padding: 10px 0px;
+    }
+}
