@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary Example</title>
+</head>
+
+<body>
+    <section>
+        <div class="text-0">9mm</div>
+        <div class="text-0">9mm</div>
+        <div class="text-0">12mm</div>
+        <div class="text-1">12mm</div>
+        <div class="text-0">9mm</div>
+        <div class="text-0">11mm</div>
+        <div class="text-0">11mm</div>
+    </section>
+
+    <script>
+        const elements = document.querySelectorAll('section div');
+
+        const dictionary = {};
+
+        elements.forEach(element => {
+            const className = element.className;
+            const content = element.textContent;
+
+            if (dictionary[content]) {
+                if (className === 'text-1' && dictionary[content] === 'text-0') {
+                    dictionary[content] = className;
+                }
+            } else {
+                dictionary[content] = className;
+            }
+        });
+
+        console.log(dictionary);
+
+        const section = document.querySelector('section');
+
+        section.innerHTML = "";
+        for (const key in dictionary) {
+            const value = dictionary[key];
+
+            const newDiv = document.createElement('div');
+
+            newDiv.className = value;
+            newDiv.textContent = key;
+
+            section.appendChild(newDiv);
+        }
+    </script>
+</body>
+
+</html>

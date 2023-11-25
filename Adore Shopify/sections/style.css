@@ -282,6 +282,108 @@ body {
     border-bottom-right-radius: 3px;
 }
 
+.rating-section {
+    width: 100%;
+    background-color: #F1F2F5;
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.rating-section .heading {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.rating-section svg {
+    fill: #FDCC0D;
+    width: 1.5em;
+    height: 1.2em;
+}
+
+.rating-section .images {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.rating-section .images .image {
+    width: 48%;
+}
+
+.rating-section .image img {
+    border-radius: 10px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.footer-dev {
+    max-width: 1200px;
+    margin: 0px auto;
+    background-color: #fff;
+    padding: 0px 20px;
+    box-sizing: border-box;
+}
+
+.footer-sec {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px auto;
+}
+
+.footer-sec .footer-sections {
+    width: 300px;
+}
+
+.footer-sec address {
+    margin: 10px 0px;
+}
+
+.footer-sec .logo {
+    width: 150px;
+}
+
+.footer-sec .social-icons img {
+    width: 30px;
+    margin: 0px 3px;
+}
+
+.footer-sec .footer-sections .about-us {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-sections .about-us a {
+    text-decoration: none;
+    color: black;
+    margin: 2px 0px;
+}
+
+.footer-dev .copyright {
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.footer-dev .copy-icon {
+    margin-top: 0px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .footer-dev {
+        width: 1000px;
+    }
+
+    .footer-sec {
+        width: 100%;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .menu-section {
@@ -367,5 +469,22 @@ body {
 
     .delivery-option-section .option #transport {
         width: 50px;
+    }
+
+    .rating-section .images {
+        flex-direction: column;
+    }
+
+    .rating-section .images .image {
+        width: 95%;
+    }
+
+    .footer-dev {
+        width: 100%;
+    }
+
+    .footer-sec {
+        flex-direction: column;
+
     }
 }
