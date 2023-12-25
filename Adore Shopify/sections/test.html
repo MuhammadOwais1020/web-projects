@@ -4,53 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dictionary Example</title>
+    <title>Dynamic Width Example</title>
+    <style>
+        /* Your other styles go here */
+        .menu-section {
+            border: 1px solid #ccc;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-section-childs {
+            text-align: center;
+            padding: 10px 0px;
+            border-bottom: solid 1px black;
+            /* Any other styles for your child elements */
+        }
+    </style>
 </head>
 
 <body>
-    <section>
-        <div class="text-0">9mm</div>
-        <div class="text-0">9mm</div>
-        <div class="text-0">12mm</div>
-        <div class="text-1">12mm</div>
-        <div class="text-0">9mm</div>
-        <div class="text-0">11mm</div>
-        <div class="text-0">11mm</div>
-    </section>
+    <div class="menu-section" id="menu-section">
+        <div class="menu-section-childs">Content 1</div>
+        <div class="menu-section-childs">Content 22 wfrfr sdfsfd </div>
+        <div class="menu-section-childs">Content 333</div>
+    </div>
 
     <script>
-        const elements = document.querySelectorAll('section div');
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the parent container
+            var parent = document.getElementById("menu-section");
 
-        const dictionary = {};
+            // Get all child elements
+            var children = parent.getElementsByClassName("menu-section-childs");
 
-        elements.forEach(element => {
-            const className = element.className;
-            const content = element.textContent;
+            // Initialize variable to store maximum width
+            var maxWidth = 0;
 
-            if (dictionary[content]) {
-                if (className === 'text-1' && dictionary[content] === 'text-0') {
-                    dictionary[content] = className;
+            // Loop through each child element to find the maximum width
+            for (var i = 0; i < children.length; i++) {
+                var currentWidth = children[i].offsetWidth;
+                if (currentWidth > maxWidth) {
+                    maxWidth = currentWidth;
                 }
-            } else {
-                dictionary[content] = className;
+            }
+
+            // Set all child elements to have the maximum width
+            for (var i = 0; i < children.length; i++) {
+                children[i].style.width = maxWidth + "px";
             }
         });
-
-        console.log(dictionary);
-
-        const section = document.querySelector('section');
-
-        section.innerHTML = "";
-        for (const key in dictionary) {
-            const value = dictionary[key];
-
-            const newDiv = document.createElement('div');
-
-            newDiv.className = value;
-            newDiv.textContent = key;
-
-            section.appendChild(newDiv);
-        }
     </script>
 </body>
 

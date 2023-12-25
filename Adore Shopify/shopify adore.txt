@@ -1,0 +1,19 @@
+// free shipping code
+<div class="header-top-right-group header-language_currency">
+                                    {%- if block.settings.show_language_currency -%}
+                                        <div class="top-language-currency{% if settings.enable_currencies %} enable-currency{% endif %}">
+                                            {%- if settings.enable_multilang_shopify -%}
+                                                {% render 'halo-top-language' %}
+                                            {%- endif -%}
+                                            {%- if settings.enable_currencies -%}
+                                                {% render 'halo-top-currency' %}
+                                            {%- endif -%}
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if block.settings.customer_service_text != blank -%}
+                                        <div class="customer-service-text">{{ block.settings.customer_service_text }}</div>
+                                    {%- endif -%}
+                                </div>
+
+
+

@@ -10,7 +10,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 10px 0px;
+    padding: 15px 0px;
     color: #BA757A;
 }
 
@@ -18,14 +18,22 @@ body {
     display: flex;
     align-items: center;
     margin: 0px 5px;
+    border-left: solid 0.5px #ba757ab8;
+    padding: 0px 20px;
+    color: rgba(0, 0, 0, 0.579);
+}
+
+.menu-section-childs:last-child {
+    border-right: solid 0.5px #ba757ab8;
 }
 
 .menu-section-childs img {
-    width: 50px;
+    width: 30px;
 }
 
 .menu-section-childs p {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .category-section {
@@ -95,14 +103,14 @@ body {
     cursor: pointer;
 }
 
-.image-text-section {
+.image-text-sections {
     width: 100%;
     height: 500px;
     display: flex;
     box-sizing: border-box;
 }
 
-.image-text-section .picture {
+.image-text-sections .picture {
     width: 40%;
     height: 100%;
     background-image: url('img/image.jpg');
@@ -111,46 +119,57 @@ body {
     background-position: center;
 }
 
-.image-text-section .picture img {
+.image-text-sections .picture img {
     width: 100%;
     height: 100%;
 }
 
-.image-text-section .picture-details {
+.image-text-sections .picture-details {
     width: 60%;
-    background-color: #F35B4F;
+    background-color: #fd6847;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     padding: 20px 0px;
+    gap: 10px;
 }
 
-.image-text-section .picture-details button {
-    background-color: #B05D5D;
-    color: white;
+.image-text-sections .picture-details img {
+    width: 200px;
+}
+
+.image-text-sections .picture-details button {
+    background-color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
     font-size: 18px;
-    width: 200px;
+    width: 280px;
     cursor: pointer;
 }
 
-.image-text-section .picture-details .its-heading {
-    font-size: 1.75em;
+.image-text-sections .picture-details .its-heading {
+    font-size: 2.5em;
+    text-align: center;
+    margin: 0px;
 }
 
-.image-text-section .picture-details .its-offer {
+.image-text-sections .picture-details .its-offer {
 
     font-size: 4.688em;
     margin: 0px;
     font-weight: bold;
 }
 
-.image-text-section .picture-details .its-price {
+.image-text-sections .picture-details .its-price {
     font-size: 2.25em;
+}
+
+.image-text-sections .picture-details .tag-line {
+    font-size: 1.5em;
 }
 
 .discount-section {
@@ -393,6 +412,12 @@ body {
 
     .menu-section-childs {
         margin: 5px 0px;
+        border: none;
+        border-bottom: solid 0.5px #ba757ab8;
+    }
+
+    .menu-section-childs:last-child {
+        border: none;
     }
 
     .category-section .categories div {
@@ -416,32 +441,32 @@ body {
     }
 
 
-    .image-text-section {
+    .image-text-sections {
         height: auto;
         flex-direction: column;
     }
 
-    .image-text-section .picture {
+    .image-text-sections .picture {
         width: 100%;
         height: 400px;
     }
 
-    .image-text-section .picture-details {
+    .image-text-sections .picture-details {
         width: 100%;
     }
 
-    .image-text-section .picture-details .its-heading {
+    .image-text-sections .picture-details .its-heading {
         font-size: 0.9rem;
     }
 
-    .image-text-section .picture-details .its-offer {
+    .image-text-sections .picture-details .its-offer {
 
         font-size: 4.2rem;
         margin: 0px;
         font-weight: bold;
     }
 
-    .image-text-section .picture-details .its-price {
+    .image-text-sections .picture-details .its-price {
         font-size: 1.5rem;
     }
 

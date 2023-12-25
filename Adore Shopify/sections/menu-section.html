@@ -10,12 +10,13 @@
 
 <body>
     <!-- desktop hero section start -->
-    <section class="image-text-section">
+    <section class="image-text-sections">
         <div class="picture-details">
-            <p class="its-heading">Brazalete + Charm + Bolsa + Caja + Certificado</p>
-            <p class="its-offer">$400 OFF</p>
-            <p class="its-price">de $1,800 a $1,400</p>
-            <button>iQuiero mi KIT!</button>
+            <p class="its-heading">Misma calidad <br> a un menor precio</p>
+            <p class="its-price"><strike>$4,900</strike> $1,200</p>
+            <button>10% en tu primera compra</button>
+            <p class="tag-line">iEstrena HOY y paga DESPUES! con</p>
+            <img src="img/Kueski-Pay.png" alt="">
         </div>
 
         <div class="picture">
@@ -72,7 +73,18 @@
         <div class="picture-details">
             <p class="its-heading">Brazalete + Charm + Bolsa + Caja + Certificado</p>
             <p class="its-offer">$400 OFF</p>
-            <p class="its-price">de $1,800 a $1,400</p>
+            <p class="its-price">de $1,800 a <svg xmlns="http://www.w3.org/2000/svg" height="30" width="15
+
+
+                " fill="yellow"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                    <path
+                        d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" />
+                </svg> $1,400 <svg xmlns="http://www.w3.org/2000/svg" height="30" width="15" fill="yellow"
+                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.-->
+                    <path
+                        d="M0 256L28.5 28c2-16 15.6-28 31.8-28H228.9c15 0 27.1 12.1 27.1 27.1c0 3.2-.6 6.5-1.7 9.5L208 160H347.3c20.2 0 36.7 16.4 36.7 36.7c0 7.4-2.2 14.6-6.4 20.7l-192.2 281c-5.9 8.6-15.6 13.7-25.9 13.7h-2.9c-15.7 0-28.5-12.8-28.5-28.5c0-2.3 .3-4.6 .9-6.9L176 288H32c-17.7 0-32-14.3-32-32z" />
+                </svg></p>
             <button>iQuiero mi KIT!</button>
         </div>
     </section>
@@ -219,6 +231,32 @@
     </footer>
     <!-- footer section end -->
 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get the parent container
+            var parent = document.getElementById("menu-section");
+
+            // Get all child elements
+            var children = parent.getElementsByClassName("menu-section-childs");
+
+            // Initialize variable to store maximum width
+            var maxWidth = 0;
+
+            // Loop through each child element to find the maximum width
+            for (var i = 0; i < children.length; i++) {
+                var currentWidth = children[i].offsetWidth;
+                if (currentWidth > maxWidth) {
+                    maxWidth = currentWidth;
+                }
+            }
+
+            // Set all child elements to have the maximum width
+            for (var i = 0; i < children.length; i++) {
+                children[i].style.width = maxWidth + "px";
+            }
+        });
+    </script>
 </body>
 
 </html>
