@@ -1,0 +1,63 @@
+/* footer form */
+.footer-form {
+    width: 100%;
+    height: 606px;
+    background-color: #f9f9f9;
+    background-image: url("img/background-svg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 20px 0px;
+}
+
+.form {
+    width: 1222px;
+    height: 300px;
+    margin: auto auto;
+    background-image: url("img/wearhouse.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-position: right;
+}
+
+.form .polygon-shap {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: #FF6B3E;
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    clip-path: polygon(10% 0, 75% 0, 60% 100%, 0 100%, 0 35%);
+}
+
+.form .polygon-shap h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.form .polygon-shap p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.form .polygon-shap button {
+    width: 260px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: white;
+    border: none;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+}
+
+@media (max-width:768px) {
+    .footer-form {}
+}
