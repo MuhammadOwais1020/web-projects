@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .success-section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            width: 100%;
+            padding: 0px 20px;
+        }
+
+        .content div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .content div h1 {
+            margin: 0px;
+            color: black;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .content div p {
+            margin: 0;
+            color: black;
+            font-size: 16px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .content button {
+            width: 100%;
+            max-width: 400px;
+            padding: 1.5rem 0rem;
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            background-color: orangered;
+        }
+
+        .cross-svg svg {
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .cross-svg svg path {
+            fill: #748999;
+        }
+
+        @media (max-width:425px) {
+            .content div h1 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="success-section">
+        <div class="cross-svg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12"
+                viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+            </svg>
+        </div>
+
+        <div class="content">
+            <div>
+                <h1>Successful!</h1>
+                <p>Your account has been successfully deleted</p>
+                <button>Home Page</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>

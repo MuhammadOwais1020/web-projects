@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #call-to {
+            position: relative;
+        }
+
+        #call-to .call-to-holder {
+            /* display: grid; */
+            align-items: center;
+            grid-template-columns: auto auto auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -55%);
+            width: min(400px, 80%);
+            padding: 20px 25px;
+            border: 2px solid #FE8DA2;
+            box-shadow: 0 2px 20px #0000001a;
+            border-radius: 100px;
+            background-color: #fff;
+            margin: 0 auto;
+        }
+
+        #call-to h2 {
+            font-size: 20px;
+            color: #3A3A3A;
+            font-family: Asap;
+            position: relative;
+            top: -1px;
+            margin: 0px;
+            font-weight: 700;
+            text-align: center;
+        }
+.container{
+    width: 100%;
+    height: 500px;
+    background-color:#3A3A3A
+}
+        @media (max-width: 425px) {
+            #call-to h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    </div>
+    <div id="call-to">
+        <div class="call-to-holder">
+            <span class="heading flex">
+                <h2>Unlock cherished memories with the best gift.</h2>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>

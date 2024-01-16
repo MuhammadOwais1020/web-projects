@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change Account</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .change-account {
+            width: 100%;
+            box-sizing: border-box;
+            background-image: url("img/particles-half.png");
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: 100%;
+            background-color: #F9F9F9;
+            padding: 100px 0px;
+        }
+
+        .change-account .change {
+            width: min(760px, 80%);
+            margin-inline: auto;
+            background-color: white;
+            padding: 3.5rem 0rem;
+        }
+
+        .change-account .change .content {
+            width: min(400px, 90%);
+            margin-inline: auto;
+            display: grid;
+            gap: 20px;
+        }
+
+        .change-account .heading h1 {
+            margin: 0px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+
+        .change-account .heading p {
+            margin: 0px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .change-account .input-field label {
+            color: #748999;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .change-account .input-field input {
+            width: 100%;
+            border: 1px solid #E5EAF5;
+            padding: 1.2rem;
+            font-size: 16px;
+            font-weight: 400;
+            color: black;
+            margin: .5rem 0rem;
+        }
+
+        .change-account button {
+            width: 100%;
+            background-color: orangered;
+            border: none;
+            padding: 1.2rem;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        @media (max-width:768px) {
+            .change-account {
+                background-repeat: no-repeat;
+                background-position: bottom;
+                background-size: 150%;
+                background-color: #F9F9F9;
+                padding: 100px 0px;
+            }
+        }
+
+        @media (max-width:425px) {
+            .change-account {
+                padding: 0px 0px;
+                padding-bottom: 100px;
+            }
+
+            .change-account .change {
+                width: 100%;
+                background: transparent;
+            }
+
+            .change-account .heading h1 {
+                font-size: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="change-account">
+        <div class="change">
+            <div class="content">
+                <div class="heading">
+                    <h1>Change Password</h1>
+                    <p>Enter the email address you used while signing up</p>
+                </div>
+                <div class="input-field">
+                    <label for="email">Your Email</label>
+                    <input type="email" placeholder="Email" id="email" name="email">
+                </div>
+
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

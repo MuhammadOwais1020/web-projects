@@ -1,0 +1,79 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.ow-error-page {
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url("img/particles-half.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.ow-error-page .bg-image {
+    max-width: 1222px;
+    margin-inline: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    position: relative;
+}
+
+.ow-error-page .heading {
+    text-align: center;
+}
+
+.ow-error-page .heading h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 10px 0px;
+}
+
+.ow-error-page .heading p {
+    margin: 0px;
+    color: #FF6B3E;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.ow-error-page button {
+    width: 260px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #FF6B3E;
+    padding: 1.25rem 3.125rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    border: none;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
+}
+
+.ow-error-page .safety-halmet {
+    max-width: 360px;
+    padding: 0px 10px;
+    bottom: 0;
+}
+
+@media (max-width:768px) {
+    .ow-error-page {
+        background-position-x: left;
+        background-size: 200%;
+    }
+}
+
+@media (max-width:426px) {
+    .ow-error-page {
+        background-size: 300%;
+    }
+
+    .ow-error-page .safety-halmet {
+        max-width: 257px;
+    }
+}

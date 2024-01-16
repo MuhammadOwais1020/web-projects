@@ -1,14 +1,10 @@
-body {
-    padding: 0px;
-    margin: 0px;
-}
 
 .ais-about-us {
     width: 100%;
     height: 737px;
     background: no-repeat center/100% url("img/background-svg.png");
     box-sizing: border-box;
-    display: none;
+    /* display: none; */
 }
 
 .ais-about-us .about-us {
@@ -57,7 +53,6 @@ body {
     text-transform: uppercase;
     background: none;
     border: solid 1px black;
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0 35%);
 }
 
 @media (max-width: 1222px) {

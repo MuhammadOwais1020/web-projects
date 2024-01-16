@@ -1,0 +1,144 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.contact-us-section {
+    width: 100%;
+}
+
+.contact-us-section .contact-us-inner {
+    width: min(1000px, 90%);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-inline: auto;
+}
+
+.contact-us-section .form-map {
+    display: flex;
+    gap: 50px;
+}
+
+.form-map .form,
+.form-map .map {
+    width: 100%;
+}
+
+.form-map .map iframe {
+    min-height: 550px;
+}
+
+.form-map .form button {
+    width: 100%;
+    background-color: orangered;
+    border: none;
+    padding: 1.2rem;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.contact-us-section .contact-social h2 {
+    display: none;
+    text-align: center;
+}
+
+.contact-us-section .contact-information {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 4px 20px 0px rgba(217, 217, 217, 0.40);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-information .svg-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-information .svg-group svg {
+    fill: orangered;
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #E5EAF5;
+}
+
+.contact-information .svg-group p {
+    margin-top: 0px;
+    text-align: center;
+}
+
+.contact-us-section .social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem 0rem;
+}
+
+.contact-us-section .social-media svg {
+    fill: #748999;
+}
+
+.form .input-field label {
+    color: #748999;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form .input-field input,
+.form .input-field textarea {
+    width: 100%;
+    border: 1px solid #E5EAF5;
+    padding: 1.2rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: .5rem 0rem;
+}
+
+@media (max-width:1000px) {
+    .contact-us-section .contact-us-inner {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .contact-us-section .form-map {
+        flex-direction: column-reverse;
+    }
+
+    .form-map .form h2 {
+        text-align: center;
+    }
+
+    .contact-us-section .contact-social h2 {
+        display: block;
+    }
+
+    .contact-us-section .contact-information {
+        box-shadow: none;
+    }
+
+    .contact-us-section .contact-information {
+        padding: 1rem 0rem;
+    }
+}
+
+@media (max-width:768px) {
+    .contact-us-section .contact-information {
+        flex-direction: column;
+    }
+
+    .contact-information .svg-group {
+        flex-direction: column;
+    }
+}
