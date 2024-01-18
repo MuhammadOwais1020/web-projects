@@ -1,0 +1,173 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.price-calculate-section {
+    width: 100%;
+    background: #F9F9F9;
+    background-image: url('img/particles-half.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.price-calculate-section .price-calculate-inner {
+    width: min(1000px, 90%);
+    padding: 6rem 0rem;
+    margin-inline: auto;
+}
+
+.price-calculate-section .main-heading {
+    width: min(600px, 100%);
+    text-align: center;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+}
+
+.price-calculate-section .main-heading h1 {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #141414;
+    margin: 0px;
+}
+
+.price-calculate-section .main-heading p {
+    color: #383838;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.price-calculate-section .form-parent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.price-calculate-section .form-parent .options {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-inline: auto;
+}
+
+.price-calculate-section .form-parent .options .option {
+    max-width: 450px;
+    border: 1px solid #E5EAF5;
+    background: #FFF;
+    padding: 2rem;
+    box-shadow: 0px 4px 20px 0px rgba(217, 217, 217, 0.40);
+}
+
+.price-calculate-section .form-parent .options .option .option-values {
+    display: flex;
+    gap: 50px;
+}
+
+.price-calculate-section .check-box {
+    margin: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price-calculate-section .form-parent .options h2 {
+    margin: 0px;
+}
+
+.price-calculate-section .form-parent .options hr {
+    margin: 1rem 0rem;
+}
+
+.price-calculate-section .form {
+    padding: 2rem;
+    background-color: white;
+    margin-inline: auto;
+}
+
+.price-calculate-section .form h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    color: #141414;
+    margin-top: 0px;
+}
+
+.form .input-field label {
+    color: #748999;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.form .input-field input,
+.form .input-field textarea {
+    width: 100%;
+    border: 1px solid #E5EAF5;
+    padding: 1.2rem;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+    margin: .5rem 0rem;
+}
+
+.price-calculate-section .form button {
+    width: 100%;
+    background-color: orangered;
+    border: none;
+    padding: 1.2rem;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.check-box input[type="checkbox"] {
+    display: none;
+}
+
+.check-box label::before {
+    content: '\2713';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    text-align: center;
+    line-height: 8px;
+    border: 1px solid black;
+    margin-right: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    color: transparent;
+}
+
+.check-box input[type="checkbox"]:checked+label::before {
+    background-color: orangered;
+    color: white;
+}
+
+@media (max-width:1000px) {
+    .price-calculate-section .form-parent {
+        flex-direction: column;
+    }
+
+    .price-calculate-section .form {
+        margin-top: 100px;
+    }
+
+    .price-calculate-section {
+        background-size: 150%;
+    }
+}
+
+@media (max-width:768px) {
+    .price-calculate-section .form h2 {
+        font-size: 30px;
+    }
+
+    .price-calculate-section {
+        background-size: 200%;
+    }
+}
