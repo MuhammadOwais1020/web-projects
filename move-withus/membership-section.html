@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --background: #f3f6ef;
+            --primary: #C7D5B4;
+            --secondary-text: #1c1b1b;
+            --btn-bg-color: #2b2828;
+            --white: #ffffff;
+        }
+
+        .membership-options-section {
+            text-align: center;
+            padding: 70px 0;
+            background-color: var(--background);
+        }
+
+        .membership-options-section .option-switch-container .Button {
+            background-color: #2B2828;
+            color: #fff;
+        }
+
+        .membership-options-section .option-switch-container .Button:not(.active) {
+            opacity: 0.7;
+        }
+
+        .membership-options-section .option-switch-container .Button {
+            margin: 5px 10px;
+        }
+
+        .membership-options-section .option-switch-container {
+            padding: 30px 0 0;
+        }
+
+        .membership-options-text {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        .membership-options-wrapper {
+            padding: 0 15px;
+        }
+
+        .membership-option {
+            background-color: #fff;
+            border-radius: 30px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            padding: 50px 20px 40px;
+            position: relative;
+            height: 100%;
+        }
+
+        .membership-option-tag {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #C7D5B4;
+            color: #fff;
+            font-family: 'Gill-Sans-SemiBold', sans-serif;
+            text-transform: uppercase;
+            padding: 14px 42px;
+            border-radius: 25px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            font-size: 12px;
+            line-height: 1;
+        }
+
+        .membership-option .Heading {
+            font-size: 30px;
+            text-transform: uppercase;
+            font-family: 'Gill-Sans-SemiBold';
+            margin-bottom: 5px;
+        }
+
+        .membership-option .option-dollar {
+            font-size: 25px;
+            color: #C7D5B4;
+            font-family: "Alaska Beta";
+        }
+
+        .membership-option .option-price {
+            font-size: 50px;
+            color: #C7D5B4;
+            padding: 0 10px;
+            font-family: "Alaska Beta";
+        }
+
+        .membership-option .option-price-text {
+            font-size: 20px;
+            color: #939191;
+            font-weight: 300;
+        }
+
+        .membership-option .current-option-price {
+            line-height: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .membership-option .current-option-price .option-price-text {
+            align-self: flex-end;
+            padding-bottom: 13px;
+        }
+
+        .membership-option-description {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.1;
+            border-bottom: 2px solid #F5F2F2;
+        }
+
+        .membership-option-description:last-child {
+            margin-bottom: 30px;
+        }
+
+        .membership-option .button-wrapper .Button {
+            font-size: 12px;
+        }
+
+        .membership-options-container:not(.active) {
+            display: none;
+        }
+
+        .membership-options-container.flex-container {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+            padding-top: 40px;
+        }
+
+        .Heading {
+            text-align: center;
+            font-size: 50px;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0px;
+        }
+
+        .Button--teritary {
+            padding: 0.5rem 2rem;
+            border-radius: 25px;
+            border: none;
+            text-transform: uppercase;
+            background-color: var(--btn-bg-color);
+            color: var(--white);
+            cursor: pointer;
+            letter-spacing: .2em;
+        }
+
+        @media only screen and (max-width: 1099px) {
+
+            .membership-options-container.flex-container {
+                margin: 0 -50px;
+                padding-left: 14px;
+            }
+
+            .membership-options-wrapper.flex-item {
+                padding: 0px 10px;
+                flex: 1 0 80vw;
+                max-width: 395px
+            }
+
+            .membership-options--cta-text {
+                display: block;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        @media only screen and (max-width: 768px) {
+            .membership-options-container.flex-container {
+                margin: 0 -24px;
+            }
+        }
+
+        @media only screen and (min-width: 1100px) {
+
+            .membership-options-container.flex-container {
+                justify-content: center;
+            }
+
+            .membership-option .Heading {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+
+            .membership-option {
+                padding: 90px 30px 60px;
+            }
+
+            .membership-option-description {
+                height: 70px
+            }
+
+            .membership-options-section .option-switch-container .Button:first-child {
+                margin-right: 80px;
+            }
+
+            .membership-options-section .option-switch-container {
+                padding: 40px 0 60px;
+            }
+
+            .membership-options-section {
+                padding: 100px 0 80px;
+            }
+
+            .membership-option .current-option-price .option-price-text {
+                padding-bottom: 16px;
+            }
+
+            .membership-options--cta-text {
+                padding-right: 30px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="membership-options-section section-template--15131001487471__4ce8deea-5ad2-4598-991d-2e81eeef797d"
+        id="membership">
+        <div class="Container Container--narrow">
+            <h2 class="Heading u-h2">PLATINUM MEMBERSHIP</h2>
+            <div class="membership-options-text">
+                <div style="max-width: 600px; margin: 0 auto; ">
+
+                    <p>At Move With Us we believe in making your fitness journey as smooth and rewarding as possible.
+                        With
+                        our Platinum Membership, your commitment to health and fitness becomes more effortless than
+                        ever.
+                    </p>
+
+                    <p>Our Membership offers two flexible billing options, choose between the simplicity of an Annual
+                        billing cycle or a Monthly billing option for easier budgeting.</p>
+
+                </div>
+            </div>
+            <div class="option-switch-container">
+                <button class="Button Button--teritary js-switch-membership-options active" data-option="monthly">Pay
+                    Monthly</button>
+                <button class="Button Button--teritary js-switch-membership-options" data-option="annual">Pay
+                    Annually</button>
+            </div>
+            <div class="membership-options-container flex-container active" data-option="monthly">
+                <div class="membership-options-wrapper flex-item" style="--desktopColumns:3">
+                    <div class="membership-option"><span class="membership-option-tag">FREE 2024 DIARY</span>
+                        <h3 class="Heading">Platinum</h3>
+                        <div class="membership-option-price-container">
+                            <div class="current-option-price"><span class="option-dollar">$</span><span
+                                    class="option-price">18.99</span><span class="option-dollar">USD</span><span
+                                    class="option-price-text">/month</span></div>
+
+                        </div>
+                        <div class="membership-option-descriptions">
+
+                            <div class="membership-option-description">
+                                ✓ Unlock access to all Challenges.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Access to all Programs.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Platinum exclusive 'On-Demand' Pilates &amp; Running workouts.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Customised macros and meal guides.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Access to all App Features including Mindset, Nutrition, Tracking and so much more.
+                            </div>
+
+                        </div>
+
+                        <div class="button-wrapper">
+                            <button type="button" class="Button Button--secondary"
+                                onclick="addItemToCart(this, 41109444526191, 1, 2206564463)" data-upsell-collection=""
+                                data-reward="41219071606895">Select this plan</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="membership-options-wrapper flex-item" style="--desktopColumns:3">
+                    <div class="membership-option"><span class="membership-option-tag">nutrition only</span>
+                        <h3 class="Heading">EAT WITH US</h3>
+                        <div class="membership-option-price-container">
+                            <div class="current-option-price"><span class="option-dollar">$</span><span
+                                    class="option-price">10.99</span><span class="option-dollar">USD</span><span
+                                    class="option-price-text">/month</span></div>
+
+                        </div>
+                        <div class="membership-option-descriptions">
+
+                            <div class="membership-option-description">
+                                ✓ Customisable Meal Guides
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Access a library of 1200 recipes
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ 8 recipe categories, including Busy Girl
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ 10+ recipes added monthly
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Convenient shopping list feature
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Log and track your own recipes
+                            </div>
+                        </div>
+
+                        <div class="button-wrapper">
+                            <button type="button" class="Button Button--secondary"
+                                onclick="addItemToCart(this, 41069980713071, 1, 2120974447)"
+                                data-upsell-collection="cart-program-upsell-3" data-reward="">SELECT THIS PLAN</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="membership-options-container flex-container" data-option="annual">
+                <div class="membership-options-wrapper flex-item" style="--desktopColumns:3">
+                    <div class="membership-option"><span class="membership-option-tag">free 2024 diary</span>
+                        <h3 class="Heading">Platinum</h3>
+                        <div class="membership-option-price-container">
+                            <div class="current-option-price"><span class="option-dollar">$</span><span
+                                    class="option-price">189.99</span><span class="option-dollar">USD</span><span
+                                    class="option-price-text">/annually</span></div>
+
+
+                        </div>
+                        <div class="membership-option-descriptions">
+
+                            <div class="membership-option-description">
+                                ✓ Unlock access to all Challenges.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Access to all Programs.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Platinum exclusive 'On-Demand' Pilates &amp; Running workouts.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Customised macros and meal guides.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Access to all App Features including Mindset, Nutrition, Tracking and so much more.
+                            </div>
+
+                            <div class="membership-option-description">
+                                ✓ Exclusive discounts and perks including a $50 Crop Shop Boutique Discount.
+                            </div>
+                        </div>
+
+                        <div class="button-wrapper">
+                            <button type="button" class="Button Button--secondary"
+                                onclick="addItemToCart(this, 41099702009967, 1, 2206531695)" data-upsell-collection=""
+                                data-reward="41219071606895">Select this plan</button>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+
+            
+            <div class="membership-options--cta-section">
+                <p class="membership-options--cta-text"><i> * For all Platinum Monthly Memberships - After initial
+                        purchase,
+                        you can cancel within 7 days for a full refund per our Cancellation Policy. If you wish to
+                        cancel
+                        after 7 days, you agree to pay a minimum of 4 monthly charges. <br> <br> </i>Not ready to commit
+                    to
+                    a membership. Explore our individual programs.</p><a href="/pages/fitness-programs" class="Button"
+                    style="background-color: #000; color: #FFF;">Explore Programs</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

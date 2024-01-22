@@ -9,18 +9,18 @@
 .membership-section {
     width: 100%;
     background-color: var(--background);
-    padding: 2rem 0rem;
+    padding: 32px 0px;
     box-sizing: border-box;
 }
 
 .membership-inner {
-    max-width: 1000px;
+    max-width: 800px;
     margin-inline: auto;
-    padding: 0rem 2rem;
+    padding: 0px 32px;
 }
 
 .membership-inner .heading .description {
-    margin: 2rem 0rem;
+    margin: 32px 0px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -52,13 +52,48 @@
 }
 
 .membership-inner .buttons button {
-    padding: 0.5rem 2rem;
-    border-radius: 100px;
     border: none;
     text-transform: uppercase;
     background-color: var(--btn-bg-color);
     color: var(--white);
     cursor: pointer;
+    letter-spacing: 3.2px;
+
+    padding: 14px 42px;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.membership-cards {
+    width: 100%;
+    display: flex;
+    gap: 32px;
+    /* padding: 0px 32px; */
+    margin-top: 80px;
+}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper button {
+    border: none;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    color: #1c1b1b;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 3.2px;
+
+    padding: 14px 42px;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 12px;
+    line-height: 1;
 }
 
 @media (max-width:425px) {
@@ -69,4 +104,234 @@
     .membership-inner .heading p {
         font-size: 18px;
     }
+}
+
+.membership-options-section {
+    text-align: center;
+    padding: 70px 0;
+}
+
+.membership-options-section .option-switch-container .Button {
+    background-color: #2B2828;
+    color: #fff;
+}
+
+.membership-options-section .option-switch-container .Button:not(.active) {
+    opacity: 0.7;
+}
+
+.membership-options-section .option-switch-container .Button {
+    margin: 5px 10px;
+}
+
+.membership-options-section .option-switch-container {
+    padding: 30px 0 0;
+}
+
+.membership-options-text {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.membership-options-wrapper {
+    padding: 0 15px;
+}
+
+.membership-option {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 50px 20px 40px;
+    position: relative;
+}
+
+.membership-option-tag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--primary);
+    color: #fff;
+    font-family: 'Gill-Sans-SemiBold', sans-serif;
+    text-transform: uppercase;
+    padding: 14px 42px;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 12px;
+    line-height: 1;
+}
+
+.membership-option .Heading {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Gill-Sans-SemiBold';
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.membership-option .option-dollar {
+    font-size: 25px;
+    color: #C7D5B4;
+    font-family: "Alaska Beta";
+    font-weight: 700;
+}
+
+.membership-option .option-price {
+    font-size: 50px;
+    color: #C7D5B4;
+    padding: 0 10px;
+    font-family: "Alaska Beta";
+    font-weight: 700;
+}
+
+.membership-option .option-price-text {
+    font-size: 20px;
+    color: #939191;
+    font-weight: 300;
+}
+
+.membership-option .current-option-price {
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.membership-option .current-option-price .option-price-text {
+    align-self: flex-end;
+    padding-bottom: 13px;
+}
+
+.membership-option-description {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.1;
+    border-bottom: 2px solid #F5F2F2;
+}
+
+.membership-option-description:last-child {
+    margin-bottom: 30px;
+}
+
+.membership-option .button-wrapper .Button {
+    font-size: 12px;
+}
+
+.membership-options-container:not(.active) {
+    display: none;
+}
+
+.membership-options-container.flex-container {
+    flex-wrap: nowrap;
+    overflow: auto;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+.membership-options--cta-section .Button--secondary {
+    background-color: #c7d5b4;
+    display: block;
+    max-width: 200px;
+    margin: 15px auto !important;
+}
+
+.membership-options--cta-section {
+    line-height: 1.2;
+    margin-top: 15px;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.membership-options--cta-section .Button {
+    border: none;
+    text-transform: uppercase;
+    background-color: #000;
+    color: var(--white);
+    cursor: pointer;
+    letter-spacing: 3.2px;
+
+    padding: 14px 42px;
+    border-radius: 25px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    font-size: 12px;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.membership-options--cta-text {
+    /* padding-right: 0px; */
+    text-align: center;
+}
+
+@media only screen and (max-width: 1099px) {
+
+    .membership-options-container.flex-container {
+        margin: 0 -50px;
+        padding-left: 14px;
+    }
+
+    .membership-options-wrapper.flex-item {
+        padding: 0px 10px;
+        flex: 1 0 80vw;
+        max-width: 395px
+    }
+
+    .membership-options--cta-text {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .membership-options-container.flex-container {
+        margin: 0 -24px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+
+    .membership-options-container.flex-container {
+        justify-content: center;
+    }
+
+    .membership-option .Heading {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+
+    .membership-option {
+        padding: 90px 30px 60px;
+    }
+
+    .membership-option-description {
+        height: 70px
+    }
+
+    .membership-options-section .option-switch-container .Button:first-child {
+        margin-right: 80px;
+    }
+
+    .membership-options-section .option-switch-container {
+        padding: 40px 0 60px;
+    }
+
+    .membership-options-section {
+        padding: 100px 0 80px;
+    }
+
+    .membership-option .current-option-price .option-price-text {
+        padding-bottom: 16px;
+    }
+
+    .membership-options--cta-text {
+        padding-right: 30px;
+    }
+
 }
