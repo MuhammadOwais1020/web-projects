@@ -1,0 +1,61 @@
+.traps-section {
+    width: 100%;
+    background-color: #F2F2F2;
+}
+
+.traps-inner {
+    max-width: 1000px;
+    padding-inline: 32px;
+    margin-inline: auto;
+}
+
+.traps-inner .heading {
+    width: 100%;
+    padding-block: 32px;
+}
+
+.traps-inner .heading h1 {
+    margin: 0px;
+    font-size: 40px;
+    font-weight: 700;
+    color: #141414;
+}
+
+.traps-inner .heading p {
+    margin: 0px;
+    font-size: 16px;
+    color: #141414;
+    font-weight: 400;
+}
+
+.traps-inner .slider {
+    width: 100%;
+    padding-block: 32px;
+    display: flex;
+    gap: 10px;
+}
+
+.traps-inner .slider .item {
+    background-color: #ffffff;
+    padding: 8px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.traps-inner .slider .item p {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.traps-inner .slider .item .image {
+    width: 35px;
+    height: 25px;
+}
+
+.traps-inner .slider .item .image img {
+    width: 100%;
+    height: 100%;
+}

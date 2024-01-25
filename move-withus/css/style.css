@@ -16,7 +16,7 @@
 .membership-inner {
     max-width: 800px;
     margin-inline: auto;
-    padding: 0px 32px;
+    padding-inline: 16px;
 }
 
 .membership-inner .heading .description {
@@ -69,9 +69,10 @@
 .membership-cards {
     width: 100%;
     display: flex;
+    justify-content: center;
     gap: 32px;
-    /* padding: 0px 32px; */
-    margin-top: 80px;
+    margin-top: 45px;
+
 }
 
 .button-wrapper {
@@ -88,22 +89,12 @@
     cursor: pointer;
     font-weight: 600;
     letter-spacing: 3.2px;
-
-    padding: 14px 42px;
+    padding: 14px 32px;
     border-radius: 25px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     font-size: 12px;
-    line-height: 1;
-}
-
-@media (max-width:425px) {
-    .membership-inner .heading h2 {
-        font-size: 40px;
-    }
-
-    .membership-inner .heading p {
-        font-size: 18px;
-    }
+    line-height: 1.2;
+    text-align: center;
 }
 
 .membership-options-section {
@@ -154,11 +145,12 @@
     color: #fff;
     font-family: 'Gill-Sans-SemiBold', sans-serif;
     text-transform: uppercase;
-    padding: 14px 42px;
+    padding: 10px 32px;
     border-radius: 25px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     font-size: 12px;
-    line-height: 1;
+    line-height: 1.2;
+    text-align: center;
 }
 
 .membership-option .Heading {
@@ -197,18 +189,14 @@
     align-items: center;
 }
 
-.membership-option .current-option-price .option-price-text {
-    align-self: flex-end;
-    padding-bottom: 13px;
-}
-
 .membership-option-description {
-    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    line-height: 1.1;
+    line-height: 1.2;
     border-bottom: 2px solid #F5F2F2;
+    text-align: center;
+    padding-block: 1rem;
 }
 
 .membership-option-description:last-child {
@@ -246,6 +234,7 @@
     justify-content: center;
     align-items: center;
     margin-inline: auto;
+    padding-inline: 16px;
 }
 
 .membership-options--cta-section .Button {
@@ -256,7 +245,7 @@
     cursor: pointer;
     letter-spacing: 3.2px;
 
-    padding: 14px 42px;
+    padding: 14px 32px;
     border-radius: 25px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     font-size: 12px;
@@ -265,9 +254,13 @@
 }
 
 .membership-options--cta-text {
-    /* padding-right: 0px; */
     text-align: center;
 }
+
+.membership-cards .card {
+    max-width: 350px;
+}
+
 
 @media only screen and (max-width: 1099px) {
 
@@ -287,51 +280,60 @@
         margin-bottom: 10px;
     }
 
+
 }
 
-@media only screen and (max-width: 768px) {
-    .membership-options-container.flex-container {
-        margin: 0 -24px;
+@media (max-width: 1024px) {
+    .membership-cards {
+        flex-direction: column;
+        gap: 45px;
+        align-items: center;
     }
 }
 
-@media only screen and (min-width: 1100px) {
+@media (max-width:515px) {
+    .membership-inner .heading h2 {
+        font-size: 30px;
+    }
 
-    .membership-options-container.flex-container {
-        justify-content: center;
+    .membership-inner .heading p {
+        font-size: 16px;
+    }
+
+    .membership-inner .buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .membership-option-tag {
+        width: 40%;
+    }
+
+    .button-wrapper button {
+        padding: 10px 18px;
     }
 
     .membership-option .Heading {
-        font-size: 40px;
-        margin-bottom: 20px;
+        font-size: 20px;
     }
 
-    .membership-option {
-        padding: 90px 30px 60px;
+    .membership-option .option-dollar {
+        font-size: 20px;
     }
 
-    .membership-option-description {
-        height: 70px
-    }
-
-    .membership-options-section .option-switch-container .Button:first-child {
-        margin-right: 80px;
-    }
-
-    .membership-options-section .option-switch-container {
-        padding: 40px 0 60px;
-    }
-
-    .membership-options-section {
-        padding: 100px 0 80px;
+    .membership-option .option-price {
+        font-size: 35px;
     }
 
     .membership-option .current-option-price .option-price-text {
-        padding-bottom: 16px;
+        font-size: 16px;
     }
+}
 
-    .membership-options--cta-text {
-        padding-right: 30px;
-    }
+#btn-monthly {
+    background-color: #676563;
+}
 
+#platinum-membership {
+    display: none;
 }

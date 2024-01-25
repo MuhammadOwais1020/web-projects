@@ -9,7 +9,9 @@
 </head>
 
 <body>
+
     <section class="membership-section">
+
         <div class="membership-inner">
             <div class="heading">
                 <h2>PLATINUM MEMBERSHIP</h2>
@@ -81,7 +83,7 @@
                 <div class="card" id="eat-with-us">
                     <div class="membership-option">
                         <span class="membership-option-tag">free 2024 diary</span>
-                        <h3 class="Heading">Platinum</h3>
+                        <h3 class="Heading">Eat With Us</h3>
                         <div class="membership-option-price-container">
                             <div class="current-option-price">
                                 <span class="option-dollar">$</span>
@@ -129,6 +131,7 @@
 
             </div>
         </div>
+
         <div class="membership-options--cta-section">
             <p class="membership-options--cta-text">
                 <i> * For all Platinum Monthly Memberships - After initial
@@ -143,7 +146,32 @@
             <a href="/pages/fitness-programs" class="Button">Explore
                 Programs</a>
         </div>
+
     </section>
+
+    <script>
+        var btn_monthly = document.getElementById("btn-monthly");
+        var btn_annaully = document.getElementById("btn-annually");
+
+        var platinum_card = document.getElementById("platinum-membership");
+        var eat_with_us_card = document.getElementById("eat-with-us");
+
+        btn_monthly.addEventListener("click", function () {
+            btn_monthly.style.backgroundColor = "#2b2828";
+            btn_annaully.style.backgroundColor = "#676563";
+
+            platinum_card.style.display = "block";
+            eat_with_us_card.style.display = "none";
+        });
+
+        btn_annaully.addEventListener("click", function () {
+            btn_annaully.style.backgroundColor = "#2b2828";
+            btn_monthly.style.backgroundColor = "#676563";
+
+            platinum_card.style.display = "none";
+            eat_with_us_card.style.display = "block";
+        });
+    </script>
 </body>
 
 </html>
