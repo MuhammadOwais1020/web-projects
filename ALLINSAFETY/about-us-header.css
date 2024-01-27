@@ -1,0 +1,168 @@
+:root {
+    --link-color: #748999;
+    --black: #141414;
+    --white: #F2F5F7;
+    --orange: #FF6B3E;
+    --border: #383838;
+    --red: #ED1C24;
+    --light-white: #F9F9F9;
+    --clip-path-btn: polygon(20px 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%, 0% 20px);
+    --clip-path-btn-one: polygon(20px 0, 100% 0, 100% calc(100% - 20px), 100% 100%, 0 100%, 0% 20px);
+}
+
+.font-black {
+    color: var(--black);
+}
+
+.header-heading {
+    font-size: 62px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.header-description {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 0px;
+}
+
+.para-description {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.heading {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.safety-btn {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    clip-path: var(--clip-path-btn-one);
+    padding-block: 16px;
+}
+
+.safety-btn svg {
+    width: 7px !important;
+}
+
+.btn-dark {
+    color: var(--white);
+    background-color: var(--orange);
+}
+
+.btn-dark svg {
+    fill: var(--white);
+}
+
+.btn-light {
+    border: solid 1px var(--black);
+    color: var(--black);
+}
+
+.btn-light svg {
+    fill: var(--black);
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.about-us-header {
+    width: 100%;
+    background-color: var(--light-white);
+    background-image: url('img/particles-half-flip.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top right;
+}
+
+.about-us-header .auh-inner {
+    width: min(calc(100% - 32px), 1222px);
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 32px;
+}
+
+.about-us-header .auh-inner .image,
+.about-us-header .auh-inner .image2 {
+    width: 350px;
+}
+
+.about-us-header .auh-inner .image img,
+.about-us-header .auh-inner .image2 img {
+    width: 100%;
+}
+
+.about-us-header .auh-inner .heading-btns {
+    max-width: 550px;
+}
+
+.about-us-header .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.background-none {
+    background: none !important;
+    background-color: var(--white);
+}
+
+@media (max-width:1250px) {
+    .about-us-header {
+        background: none;
+        background-color: var(--light-white);
+    }
+}
+
+@media (max-width:1024px) {
+    .about-us-header .auh-inner {
+        flex-direction: column-reverse;
+    }
+
+    .header-description,
+    .header-heading {
+        text-align: center;
+    }
+
+    .about-us-header .auh-inner .image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-heading {
+        font-size: 40px;
+    }
+
+    .heading {
+        font-size: 30px;
+    }
+
+    .about-us-header .buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-heading {
+        font-size: 30px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+}

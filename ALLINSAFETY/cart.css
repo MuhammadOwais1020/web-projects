@@ -189,12 +189,33 @@ body {
         justify-content: space-between;
     }
 
-    .bts {
+    .checkout {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .cart .checkout a {
+        text-decoration: none;
+    }
+
+    .cart .checkout .back-to-shop {
+        border: solid 1px #141414;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+padding-block: 16px;
+    }
+
+    .cart .checkout .back-to-shop svg {
         display: none;
     }
 
-    .checkout {
-        flex-direction: column;
+    .cart .checkout .back-to-shop p {
+        text-decoration: none;
+        color: #141414;
+        font-size: 16px;
+        font-weight: 700;
+        margin-block: 0px;
     }
 
     .checkout .checkout-price {
