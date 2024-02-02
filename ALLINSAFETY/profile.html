@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+        .card {
+            background-color: aqua;
+            height: 100px;
+            width: 200px;
+            display: block;
+            margin: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="btn-group">
+            <button onclick="displayShowHide(1)">Home</button>
+            <button onclick="displayShowHide(2)">Chatbox</button>
+        </div>
+
+        <div class="cards">
+            <div class="card" id="card-1">
+                <h1>Home</h1>
+            </div>
+            <div class="card" id="card-2">
+                <h1>Chatbox</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function displayShowHide(card_no) {
+            console.log("hello");
+            document.getElementsByClassName("card").style.display = "none";
+            document.getElementById("card-" + n).style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

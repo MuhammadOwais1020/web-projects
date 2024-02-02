@@ -86,6 +86,7 @@ body {
     background-position: top right;
 }
 
+
 .about-us-header .auh-inner {
     width: min(calc(100% - 32px), 1222px);
     margin-inline: auto;
@@ -95,13 +96,11 @@ body {
     padding-block: 32px;
 }
 
-.about-us-header .auh-inner .image,
-.about-us-header .auh-inner .image2 {
+.about-us-header .auh-inner .image {
     max-width: 350px;
 }
 
-.about-us-header .auh-inner .image img,
-.about-us-header .auh-inner .image2 img {
+.about-us-header .auh-inner .image img {
     width: 100%;
 }
 
@@ -123,23 +122,28 @@ body {
 
 @media (max-width:1250px) {
     .about-us-header {
-        background: none;
+        /* background: none; */
         background-color: var(--light-white);
     }
 }
 
 @media (max-width:1024px) {
+    .about-us-header {
+        background-image: url('img/particles-half-bottom.png');
+        background-position: bottom right;
+    }
+
     .about-us-header .auh-inner {
         flex-direction: column-reverse;
+    }
+
+    .about-us-header .auh-inner .image {
+        margin-top: 60px;
     }
 
     .about-us-header .header-description,
     .about-us-header .header-heading {
         text-align: center;
-    }
-
-    .about-us-header .auh-inner .image {
-        display: none;
     }
 }
 
