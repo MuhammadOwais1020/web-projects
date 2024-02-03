@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <title>Image Slider</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            transition: clip-path 0.3s ease-in-out;
+        }
+
+        #slider {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="img/wearhouse.png" alt="Image 1" id="image1">
+        <img src="img/safety-halmet.png" alt="Image 2" id="image2">
+        <input type="range" id="slider" min="0" max="100" value="50">
+    </div>
+
+    <script>
+        document.getElementById('slider').addEventListener('input', function () {
+            const value = this.value;
+            const clipPathValue = `polygon(0% 0%, ${value}% 0%, ${value}% 100%, 0% 100%)`;
+            document.getElementById('image2').style.clipPath = clipPathValue;
+        });
+
+    </script>
+</body>
+
+</html>
