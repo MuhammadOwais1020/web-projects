@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+
+    <style>
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label.check-box::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 8px;
+            border: 1px solid #ffffff;
+            margin-right: 5px;
+            padding: 5px;
+            border-radius: 0px;
+            color: transparent;
+            font-size: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        label#red::before {
+            background-color: red;
+        }
+
+        label#green::before {
+            background-color: yellowgreen;
+        }
+
+        label#blue::before {
+            background-color: blue;
+        }
+
+        label:has(input[type="checkbox"]:checked)::before {
+            border-color: rgb(36, 157, 213);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="color-box">
+            <label id="red" class="check-box" for="trap-accessories">
+                <input type="checkbox" name="" id="trap-accessories">
+            </label>
+
+            <label id="green" class="check-box" for="trap-accessories">
+                <input type="checkbox" name="" id="trap-accessories">
+            </label>
+
+            <label id="blue" class="check-box" for="trap-accessories">
+                <input type="checkbox" name="" id="trap-accessories">
+            </label>
+        </div>
+
+    </div>
+</body>
+
+</html>
